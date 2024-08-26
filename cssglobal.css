@@ -1,0 +1,200 @@
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family:'Times New Roman', serif;
+    background: linear-gradient(45deg, #E9E4F0, #D3CCE3, #845ec2, #009e8e);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: black;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header et navigation */
+.header, nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 5px;
+    background: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: whitesmoke;
+}
+
+
+
+/* Contenu principal et sections */
+h1 {
+    font-size: 36px;
+    color:black;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-section, .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: none;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.about-section .text {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.about-section .profil img, .section img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text a{
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.section {
+    background-color: none;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    flex: 1 1 45%;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+/* Bouton de retour */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: black;
+}
+.cv-container {
+    width: 80%; /* Largeur relative pour s'adapter à différentes tailles d'écran */
+    max-width: 800px; /* Limite maximale pour la largeur (environ A4) */
+    aspect-ratio: 1 / 1.41; /* Ratio d'une page A4 */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.cv-container img {
+    width: 100%;
+    height: auto; /* Assure que l'image garde ses proportions */
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Animation de fond */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Mode sombre */
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-section, .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-section .text {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .profil img, .section img {
+        max-width: 300px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
